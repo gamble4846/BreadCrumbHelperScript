@@ -83,7 +83,7 @@ def RenameFiles():
     i = 1
     for x in onlyfiles:
         y = x.split('.')
-        ext = "." + y[1]
+        ext = "." + y[len(y)-1]
         oldPath = FoldderPath + "/" + x
         newPath = FoldderPath + "/" + str(i) + GetRandomAlphabet() + GenerateRandomKey(20) + ext
         os.rename(oldPath,newPath)
